@@ -32,7 +32,9 @@ class MyDataTable {
                           ? MyColor.warning
                           : text == "FAILED" || text == "NOT FOUND"
                               ? MyColor.danger
-                              : null))));
+                              : text == "S.a. Sadik Portfolio"
+                                  ? Colors.grey.shade200
+                                  : null))));
 
   static DataRow row({required int index, required List<String> values, void Function()? action, IconData? actionIcon, String? iconToolTip}) => DataRow(
       color: MaterialStatePropertyAll(index.isEven ? MyColor.dataTableRowBackgroundB : MyColor.dataTableRowBackgroundA),

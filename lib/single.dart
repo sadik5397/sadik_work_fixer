@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sadik_work_fixer/find_hannel.dart';
 import 'package:sadik_work_fixer/multi.dart';
 import 'package:sadik_work_fixer/others/console.dart';
 
@@ -33,7 +34,10 @@ class _SadikWorkDataBaseFixerState extends State<SadikWorkDataBaseFixer> {
         appBar: AppBar(
             toolbarHeight: MyPadding.value * 8,
             title: const Heading(title: "SADIK.WORK Video Database Fixer", subtitle: "Replace the google drive video URL with youtube url from this platform."),
-            actions: [MyButton.outline(margin: MyPadding.right * 2, icon: Icons.repeat_rounded, label: "Multiple", onTap: () => Get.to(() => const SadikWorkDataBaseMultiFixer()))]),
+            actions: [
+              MyButton.outline(margin: MyPadding.right * 2, icon: Icons.repeat_rounded, label: "Find Channel", onTap: () => Get.to(() => const FindChannel())),
+              MyButton.outline(margin: MyPadding.right * 2, icon: Icons.repeat_rounded, label: "Multiple", onTap: () => Get.to(() => const SadikWorkDataBaseMultiFixer()))
+            ]),
         body: Padding(
             padding: MyPadding.primaryAndQrt.copyWith(top: MyPadding.value * 2),
             child: Column(children: [
