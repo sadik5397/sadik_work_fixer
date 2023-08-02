@@ -41,8 +41,8 @@ class _FindChannelState extends State<FindChannel> {
       } else {
         setState(() => jobStatusList[i] = "FAILED");
       }
+      setState(() => progress++);
     }
-    setState(() => progress++);
   }
 
   @override
